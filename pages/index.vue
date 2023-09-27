@@ -15,7 +15,7 @@
         <p class="my-2">
             DiscMath exercises are password protected, because apparently people love them so much they steal them and deal with them on the black market. 
             For that reason it is non-trivial to get the exercises and display them on this site.
-            Please get them yourself at <UButton variant="link" to="https://dm.crypto.ethz.ch/" label="dm.crypto.ethz.ch" />
+            Please get them yourself at <UButton variant="link" target="_blank" to="https://dm.crypto.ethz.ch/" label="dm.crypto.ethz.ch" />
         </p>
     </div>
 </template>

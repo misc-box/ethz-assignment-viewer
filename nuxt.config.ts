@@ -1,10 +1,10 @@
 // Copyright 2023 Ziad Malik
 export default defineNuxtConfig({
     devtools: { enabled: true },
-    modules: ["@nuxt/ui", "@nuxtjs/supabase"],
+    modules: ["@nuxt/ui"],
     supabase: {
         redirectOptions: { 
-            login: "/login",
+            login: "/",
             callback: "/",
             exclude: ["/"] 
         },
