@@ -1,7 +1,5 @@
 ## Assignment Viewer
 
-![Screenshot](./repo/screenshot.png)
-
 ### Problem
 
 During my first year at ETH Zürich, I encountered a challenge where I had to individually access and visit every lecture website to obtain the latest assignment or homework files. This required clicking an average of four links, which was three more than I desired.
@@ -14,3 +12,7 @@ I have developed a website that consolidates various assignments, providing a ce
 
 - [ ] Don't hardcode the lectures, allow for dynamic selection / addition of lectures.
 - [ ] Get rid of different parsing logic for each lecture website, maybe get GPT-3.5 to do the parsing for me.
+
+### Screenshot
+
+![Screenshot](./repo/screenshot.png)
