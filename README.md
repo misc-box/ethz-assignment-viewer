@@ -1,5 +1,7 @@
 ## Assignment Viewer
 
+![Screenshot](./repo/screenshot.png)
+
 ### Problem
 
 During my first year at ETH Zürich, I encountered a challenge where I had to individually access and visit every lecture website to obtain the latest assignment or homework files. This required clicking an average of four links, which was three more than I desired.
