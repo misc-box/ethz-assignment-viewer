@@ -3,6 +3,10 @@ export default defineNuxtConfig({
     devtools: { enabled: true },
     modules: ["@nuxt/ui", "@nuxtjs/supabase"],
     supabase: {
-        redirectOptions: { exclude: ["/"] },
+        redirectOptions: { 
+            login: "/login",
+            callback: "/",
+            exclude: ["/"] 
+        },
     },
 });
