@@ -78,7 +78,11 @@ export default async function parse() {
 
     const exercises = rows.filter(e => e.exerciseName && e.exercisePDF);
 
-    return exercises;
+    return { 
+        exercises,
+        website: baseUrl,
+        video: "https://video.ethz.ch/lectures/d-math/2023/autumn/401-0131-00L.html",
+    };
 };
 
 // console.log(await parse())

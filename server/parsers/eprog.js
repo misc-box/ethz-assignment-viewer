@@ -26,6 +26,7 @@ function extractDateFromString(inputString) {
 
 export default async function parse() {
     const baseUrl = "https://www.lst.inf.ethz.ch/education/einfuehrung-in-die-programmierung-i--252-0027-1/_jcr_content/par/accordion/accordionitem_753370236/par/table.tableComp.json";
+    const website = "https://www.lst.inf.ethz.ch/education/einfuehrung-in-die-programmierung-i--252-0027-1.html"
     const res = await fetch(baseUrl)
 
     if (!res.ok) {
@@ -58,9 +59,13 @@ export default async function parse() {
             exercisePDF,
             solutionPDF: null,
             bonusLink: null,
-            dueDate: extractDateFromString(row.cells[2].content)
+            dueDate: extractDateFromString(row.cells[2].content),
         })
     })
 
-    return exercises;
+    return { 
+        exercises,
+        website,
+        video: "https://video.ethz.ch/lectures/d-infk/2023/autumn/252-0027-00L.html",
+    };
 };

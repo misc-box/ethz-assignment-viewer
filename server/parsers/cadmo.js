@@ -37,5 +37,9 @@ export default async function parse() {
         });
     });
 
-    return exercises;
+    return {
+        exercises,
+        website: baseUrl,
+        video: "https://video.ethz.ch/lectures/d-infk/2023/autumn/252-0026-00L.html",
+    };
 };
