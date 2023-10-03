@@ -2,11 +2,11 @@
 export default defineNuxtConfig({
     devtools: { enabled: true },
     modules: ["@nuxt/ui"],
-    supabase: {
-        redirectOptions: { 
-            login: "/",
-            callback: "/",
-            exclude: ["/"] 
-        },
-    },
+    // supabase: {
+    //     redirectOptions: { 
+    //         login: "/",
+    //         callback: "/",
+    //         exclude: ["/"] 
+    //     },
+    // },
 });

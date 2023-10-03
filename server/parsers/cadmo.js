@@ -4,6 +4,8 @@ import * as cheerio from "cheerio";
 import url from "url";
 
 export default async function parse() {
+    const lectureStart = new Date(new Date().getFullYear(), 8, 25);
+
     const baseUrl = "https://cadmo.ethz.ch/education/lectures/HS23/DA/index.html";
     const res = await fetch(baseUrl)
 
@@ -23,6 +25,7 @@ export default async function parse() {
         const exerciseName = $(element).find('td:first-child a').text().trim();
         const exercisePDF = $(element).find('td:first-child a').attr('href');
         const solutionPDF = $(element).find('td:last-child a').attr('href');
+        const dueDate = lectureStart.setDate(lectureStart.getDate() + (index ? 7 : 0));
 
         // Create an exercise object and push it to the array
         exercises.push({
@@ -30,6 +33,7 @@ export default async function parse() {
             exercisePDF: url.resolve(fileBaseUrl, exercisePDF),
             solutionPDF: solutionPDF ? url.resolve(fileBaseUrl, solutionPDF) : null,
             bonusLink: null,
+            dueDate,
         });
     });
 
