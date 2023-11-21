@@ -50,8 +50,9 @@ export default async function parse() {
 
         // Regular expression to match "Übung N" where N is a digit(s)
         const regex = /Übung \d+/;
+        const bonusRegex = /Bonusaufgabe Ü\d+/
 
-        const exerciseName = $('a').text().match(regex)[0];
+        const exerciseName = $('a').text().match(regex) ? $('a').text().match(regex)[0] : $('a').text().match(bonusRegex)[0];
         const exercisePDF = $('a').attr('href');
 
         exercises.push({
