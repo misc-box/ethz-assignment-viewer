@@ -44,7 +44,7 @@ export default async function BOT() {
   await loginButton?.click();
 
   // Wait for Moodle
-  await page.waitForSelector("");
+  await page.waitForSelector("#page-my-index");
 
   // Now presenting: 𝓽𝓱𝓮 𝓭𝓲𝓼𝓰𝓾𝓼𝓽𝓲𝓷𝓰 𝓱𝓪𝓻𝓭𝓬𝓸𝓭𝓲𝓷𝓰 𝓹𝓪𝓻𝓽 
 
